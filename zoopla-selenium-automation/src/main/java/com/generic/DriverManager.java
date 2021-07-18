@@ -9,7 +9,7 @@ public class DriverManager {
 	
 	
 	public WebDriver getDriver() {
-		System.setProperty("webdriver.chrome.driver","./Driver/chromedriver.exe");
+		System.setProperty("webdriver.ie.driver",".Driver/IEDriverServer.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.navigate().to(new BaseConfig().getData("URL"));
 		driver.manage().window().maximize();

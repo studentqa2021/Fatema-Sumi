@@ -10,7 +10,7 @@ import com.util.Screenshot;
 
 public class BaseLogin {
 
-public void getlogin(WebDriver driver) {
+public MasterPageFactory getlogin(WebDriver driver) {
 MasterPageFactory pf = new MasterPageFactory(driver);
 	
 Screenshot.getScreenShot(driver, "Home page");
@@ -38,6 +38,7 @@ if(pf.getAcceptAllCookiesBtn().isDisplayed()) {
  else {System.out.println("Test failed");
 	Assert.assertTrue(pf.getSignOutBtn().isDisplayed());	 
 	 }
+return pf;
  }
 public static void main(String[] args) {
 	
